@@ -13,7 +13,16 @@ const Navbar = () => {
         <Wrapper>
           {navbar.map((parent) => {
             return (
-              <NavLink to={parent.path} key={parent.id} className="navlinks">
+              <NavLink
+                style={({ isActive }) => {
+                  return {
+                    color: isActive ? "#0061DF" : "#fff",
+                  };
+                }}
+                to={parent.path}
+                key={parent.id}
+                className="navlinks"
+              >
                 {parent.title}
               </NavLink>
             );
