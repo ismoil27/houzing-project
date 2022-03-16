@@ -3,6 +3,7 @@ import { navbar } from "../../utilities/navbar";
 import { Container, Logo, Wrapper } from "./style";
 import logo from "../assets/icons/logo.svg";
 import { NavLink } from "react-router-dom";
+import Header from "../Header";
 
 const Navbar = () => {
   return (
@@ -19,6 +20,7 @@ const Navbar = () => {
           })}
         </Wrapper>
       </Container>
+      <Header />
     </div>
   );
 };
