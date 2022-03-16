@@ -1,0 +1,26 @@
+import React from "react";
+import { navbar } from "../../utilities/navbar";
+import { Container, Logo, Wrapper } from "./style";
+import logo from "../assets/icons/logo.svg";
+import { NavLink } from "react-router-dom";
+
+const Navbar = () => {
+  return (
+    <div className="header">
+      <Container>
+        <Logo src={logo} alt="" />
+        <Wrapper>
+          {navbar.map((parent) => {
+            return (
+              <NavLink to={parent.path} key={parent.id} className="navlinks">
+                {parent.title}
+              </NavLink>
+            );
+          })}
+        </Wrapper>
+      </Container>
+    </div>
+  );
+};
+
+export default Navbar;

@@ -1,0 +1,51 @@
+export const navbar = [
+  {
+    id: 1,
+    title: "Buy",
+    path: "/buy",
+    element: "",
+    child: [],
+  },
+  {
+    id: 2,
+    title: "Sell",
+    path: "/sell",
+    element: "",
+    child: [],
+  },
+  {
+    id: 3,
+    title: "Rent",
+    path: "/rent",
+    element: "",
+    child: [],
+  },
+  {
+    id: 4,
+    title: "Find Realtors",
+    path: "/find_realtors",
+    element: "",
+    child: [],
+  },
+  {
+    id: 5,
+    title: "My Properties",
+    path: "/my_properties",
+    element: "",
+    child: [],
+  },
+  {
+    id: 6,
+    title: "My Home",
+    path: "/my_home",
+    element: "",
+    child: [],
+  },
+  {
+    id: 7,
+    title: "Register as Realtor",
+    path: "/register_as_realtor",
+    element: "",
+    child: [],
+  },
+];
