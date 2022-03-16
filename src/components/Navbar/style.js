@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-  /* background-color: red; */
+  background-color: red;
   display: flex;
+  color: red;
   height: 80px;
   align-items: center;
   margin: 0 20px;
