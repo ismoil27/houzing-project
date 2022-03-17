@@ -8,6 +8,8 @@ const Container = styled.div`
   align-items: center;
   margin: 0 20px;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
 `;
 
 const Logo = styled.img``;

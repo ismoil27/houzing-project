@@ -1,14 +1,13 @@
 section {
   /* margin-top: 239px; */
   color: #fff;
-  display: flex;
+  /* display: flex; */
   font-style: normal;
   font-family: "Lato", "Open Sans", sans-serif;
 }
 
-section p {
+.header__p {
   margin-top: 239px;
-
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
@@ -23,4 +22,21 @@ section p {
   font-size: 60px;
   line-height: 76px;
   text-align: center;
+}
+
+.homelists__h1 {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 38px;
+  color: #0d263b;
+}
+
+.homelists__p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #696969;
+  margin-top: 10px;
 }

@@ -1,0 +1,36 @@
+.login__page {
+  background: #e5e5e5;
+}
+.login__inputs {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.login__form {
+  background: #ffffff;
+  border: 1px solid #e6e9ec;
+  box-shadow: 0px 10px 30px rgba(13, 38, 59, 0.05);
+  border-radius: 3px;
+}
+.sign__in {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 27px;
+  margin-bottom: 34px;
+}
+
+.login__inputs input::placeholder {
+  color: #696969;
+}
+
+.remember__me {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.remember__me span {
+  color: #000;
+}

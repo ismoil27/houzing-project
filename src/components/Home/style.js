@@ -19,6 +19,7 @@ const SearchMenu = styled.div`
     line-height: 20px;
     color: #fff;
     margin: 0 21px;
+    font-size: 16px;
   }
 `;
 

@@ -1,4 +1,6 @@
 import React from "react";
+import HomeLists from "../HomeLists";
+import Login from "../Login";
 // import Navbar from "../Navbar";
 import "./home.css";
 import { Container, SearchMenu } from "./style";
@@ -8,7 +10,7 @@ const Home = () => {
     <section>
       <div className="header">
         <Container className="search__section">
-          <p>It's great to be home!</p>
+          <p className="header__p">It's great to be home!</p>
           <h1>Find Your Perfect Home</h1>
           <SearchMenu>
             <h4>Buy</h4>
@@ -17,6 +19,8 @@ const Home = () => {
           </SearchMenu>
         </Container>
       </div>
+      <HomeLists />
+      <Login />
     </section>
   );
 };
