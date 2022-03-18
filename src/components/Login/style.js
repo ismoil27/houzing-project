@@ -13,14 +13,33 @@ const Container = styled.div`
   }
 `;
 
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+const Input = styled.input`
+  margin-bottom: 40px;
+  padding: 20px;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #e6e9ec;
+  :focus {
+    border-color: #0061df;
+  }
+`;
+
 const Button = styled.div`
   width: 90%;
-
   margin: 10px auto;
   color: #fff;
-  background: #0061df;
+  background: ${({ color }) => (color ? "#0D263B" : "#0061df")};
   padding: 20px 0;
   text-align: center;
+  outline: none;
+  cursor: pointer;
+  :active {
+    transform: scale(0.97);
+  }
 `;
 
 const ButtonWrapper = styled.div`
@@ -28,4 +47,4 @@ const ButtonWrapper = styled.div`
   margin: 50px auto;
 `;
 
-export { Container, Button, ButtonWrapper };
+export { Container, Button, ButtonWrapper, Wrapper, Input };

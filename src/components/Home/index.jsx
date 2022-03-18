@@ -1,6 +1,7 @@
 import React from "react";
 import HomeLists from "../HomeLists";
 import Login from "../Login";
+import Registration from "../Registration";
 // import Navbar from "../Navbar";
 import "./home.css";
 import { Container, SearchMenu } from "./style";
@@ -21,6 +22,7 @@ const Home = () => {
       </div>
       <HomeLists />
       <Login />
+      <Registration />
     </section>
   );
 };

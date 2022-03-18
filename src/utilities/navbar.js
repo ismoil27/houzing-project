@@ -6,6 +6,7 @@ import FindRealtors from "../components/FindRealtors";
 import MyProperties from "../components/MyProperties";
 import MyHome from "../components/MyHome";
 import RegisterAsRealtor from "../components/RegisterAsRealtor";
+import Login from "../components/Login";
 
 export const navbar = [
   {
@@ -63,6 +64,13 @@ export const navbar = [
     title: "Register as Realtor",
     path: "/register_as_realtor",
     element: <RegisterAsRealtor />,
+    child: [],
+  },
+  {
+    id: 9,
+    title: "",
+    path: "/login",
+    element: <Login />,
     child: [],
   },
 ];

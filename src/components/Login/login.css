@@ -26,11 +26,24 @@
 .remember__me {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 90%;
   margin: 0 auto;
   margin-top: 10px;
 }
 
+.remember__me label {
+  display: flex;
+  align-items: center;
+}
+.remember__me input {
+  margin-right: 10px;
+  width: 18px;
+  height: 18px;
+  /* display: flex; */
+  align-items: center;
+}
+
 .remember__me span {
-  color: #000;
+  color: #696969;
 }
