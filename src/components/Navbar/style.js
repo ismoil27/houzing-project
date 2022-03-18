@@ -12,7 +12,12 @@ const Container = styled.div`
   top: 0;
 `;
 
-const Logo = styled.img``;
+const Logo = styled.img`
+  cursor: pointer;
+  :hover {
+    color: #0061df;
+  }
+`;
 
 const Wrapper = styled.div`
   display: flex;

@@ -43,6 +43,10 @@ const Login = () => {
 
   return (
     <div className="login__page">
+      <div>
+        <img src="" alt="" />
+      </div>
+
       <Container>
         <form action="#" className="login__form">
           <p className="sign__in">Sign in</p>

@@ -1,7 +1,8 @@
 import React from "react";
+import Footer from "../Footer";
 import HomeLists from "../HomeLists";
-import Login from "../Login";
-import Registration from "../Registration";
+// import Login from "../Login";
+// import Registration from "../Registration";
 // import Navbar from "../Navbar";
 import "./home.css";
 import { Container, SearchMenu } from "./style";
@@ -21,8 +22,7 @@ const Home = () => {
         </Container>
       </div>
       <HomeLists />
-      {/* <Login /> */}
-      {/* <Registration /> */}
+      <Footer />
     </section>
   );
 };
