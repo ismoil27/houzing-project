@@ -21,8 +21,8 @@ const Home = () => {
         </Container>
       </div>
       <HomeLists />
-      <Login />
-      <Registration />
+      {/* <Login /> */}
+      {/* <Registration /> */}
     </section>
   );
 };

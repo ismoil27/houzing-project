@@ -8,6 +8,32 @@ import {
 } from "../Login/style";
 
 const Registration = () => {
+  // const Register = () => {
+  //   fetch(
+  //     "https://houzing-app.herokuapp.com/api/public/auth/login?fieldError.rejectedValue=%7B%7D&fieldErrors%5B0%5D.rejectedValue=%7B%7D",
+  //     {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify(state),
+  //     }
+  //   )
+  //     .then((res) => res.json())
+  //     .then((res) => {
+  //       console.log(res);
+  //       localStorage.setItem("token", res?.data);
+  //     });
+  // };
+
+  // const onChange = (e) => {
+  //   const { value, name } = e.target;
+  //   setState({
+  //     ...state,
+  //     [name]: value,
+  //   });
+  // };
+
   return (
     <div className="login__page">
       <Container>
@@ -18,14 +44,14 @@ const Registration = () => {
               className="inputs"
               type="text"
               name="firstname"
-              placeholder="Firstname"
+              placeholder="First name"
               required
             />
             <Input
               className="inputs"
               type="text"
               name="lastname"
-              placeholder="Lastname"
+              placeholder="Last name"
               required
             />
             <Input
@@ -46,12 +72,14 @@ const Registration = () => {
               type="password"
               name="password"
               placeholder="Password"
+              autoComplete="on"
               required
             />
             <Input
               type="password"
               name="password"
               placeholder="Re-enter Password"
+              autoComplete="on"
               required
             />
           </Wrapper>
