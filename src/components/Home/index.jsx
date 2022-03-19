@@ -1,5 +1,5 @@
 import React from "react";
-import Footer from "../Footer";
+// import Footer from "../Footer";
 import HomeLists from "../HomeLists";
 // import Login from "../Login";
 // import Registration from "../Registration";
@@ -22,7 +22,6 @@ const Home = () => {
         </Container>
       </div>
       <HomeLists />
-      <Footer />
     </section>
   );
 };

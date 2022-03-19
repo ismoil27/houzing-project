@@ -6,6 +6,7 @@ import { ReactComponent as instagram } from "../assets/icons/instagram.svg";
 import { ReactComponent as linkedin } from "../assets/icons/linkedin.svg";
 
 import { ReactComponent as telegram } from "../assets/icons/telegram.svg";
+import { ReactComponent as arrow } from "../assets/icons/arrow.svg";
 // import { ReactComponent as logo } from "../assets/icons/logoonly.svg";
 
 const MainContainer = styled.div`
@@ -35,7 +36,8 @@ const MainContainer = styled.div`
 const Container = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 100px 200px 30px 200px;
+  padding: 74px 30px 30px 77px;
+  /* padding: 100px 200px 30px 200px; */
   flex-wrap: wrap;
 `;
 
@@ -82,6 +84,7 @@ const Link = styled.a`
   line-height: 26px;
   text-decoration: none;
   color: var(--color-white);
+  margin-right: ${({ marginright }) => "marginright" && "15px"};
 
   ::after {
     content: "";
@@ -136,6 +139,34 @@ const Telegram = styled(telegram)`
   background-color: #0061df;
 `;
 
+const BottomContainer = styled.div`
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  height: 90px;
+`;
+
+const Wrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 90px;
+  margin-right: 30px;
+`;
+
+const LogoImage = styled.img`
+  width: 152px;
+  height: 50px;
+`;
+
+const ArrowIcon = styled(arrow)`
+  padding: 20px 18px;
+  background-color: #0061df;
+  color: var(--color-white);
+  border-radius: 3px;
+  transform: rotate(180deg);
+  box-sizing: initial;
+`;
+
 export {
   MainContainer,
   Container,
@@ -148,4 +179,8 @@ export {
   Link,
   Input,
   Telegram,
+  BottomContainer,
+  Wrapper,
+  LogoImage,
+  ArrowIcon,
 };

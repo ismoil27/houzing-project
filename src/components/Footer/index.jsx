@@ -17,7 +17,13 @@ import {
   Link,
   Input,
   Telegram,
+  Wrapper,
+  LogoImage,
+  BottomContainer,
+  ArrowIcon,
 } from "./style";
+
+import logoimage from "../assets/icons/logo.svg";
 
 const Footer = () => {
   return (
@@ -84,6 +90,27 @@ const Footer = () => {
           </div>
         </Wrap>
       </Container>
+      <BottomContainer>
+        <Wrapper>
+          <Text>Copyright © 2021 CreativeLayers. All Right Reserved.</Text>
+          <LogoImage src={logoimage} />
+          <Flex>
+            <Link marginright href="#">
+              Home
+            </Link>
+            <Link marginright href="#">
+              Site Map
+            </Link>
+            <Link marginright href="#">
+              Privacy Policy
+            </Link>
+            <Link marginright href="#">
+              Cookie Policy
+            </Link>
+          </Flex>
+          <ArrowIcon />
+        </Wrapper>
+      </BottomContainer>
     </MainContainer>
   );
 };
