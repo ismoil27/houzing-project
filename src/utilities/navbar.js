@@ -7,6 +7,7 @@ import MyProperties from "../components/MyProperties";
 import MyHome from "../components/MyHome";
 import RegisterAsRealtor from "../components/RegisterAsRealtor";
 import Login from "../components/Login";
+import Registration from "../components/Registration";
 
 export const navbar = [
   {
@@ -71,6 +72,13 @@ export const navbar = [
     title: "",
     path: "/login",
     element: <Login />,
+    child: [],
+  },
+  {
+    id: 10,
+    title: "",
+    path: "/register",
+    element: <Registration />,
     child: [],
   },
 ];

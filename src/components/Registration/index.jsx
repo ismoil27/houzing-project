@@ -5,6 +5,7 @@ import {
   Input,
   ButtonWrapper,
   Button,
+  SignIn,
 } from "../Login/style";
 
 const Registration = () => {
@@ -35,8 +36,8 @@ const Registration = () => {
   // };
 
   return (
-    <div className="login__page">
-      <Container>
+    <Container>
+      <SignIn>
         <form action="#" className="login__form">
           <p className="sign__in">Registration</p>
           <Wrapper className="login__inputs">
@@ -81,17 +82,18 @@ const Registration = () => {
               placeholder="Re-enter Password"
               autoComplete="on"
               required
+              margin
             />
           </Wrapper>
 
           <ButtonWrapper>
-            <Button className="btn" color>
+            <Button className="btn" margin color>
               Register
             </Button>
           </ButtonWrapper>
         </form>
-      </Container>
-    </div>
+      </SignIn>
+    </Container>
   );
 };
 

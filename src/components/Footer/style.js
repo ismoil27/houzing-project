@@ -76,6 +76,7 @@ const Text = styled.div`
   font-weight: 400;
   font-size: 14px;
   line-height: 26px;
+  color: var(--color-blue);
 `;
 
 const Link = styled.a`
@@ -136,7 +137,7 @@ const Telegram = styled(telegram)`
   box-sizing: initial;
   border-radius: 3px;
   /* margin-right: 5px; */
-  background-color: #0061df;
+  background-color: var(--color-blue);
 `;
 
 const BottomContainer = styled.div`
@@ -160,7 +161,7 @@ const LogoImage = styled.img`
 
 const ArrowIcon = styled(arrow)`
   padding: 20px 18px;
-  background-color: #0061df;
+  background-color: var(--color-blue);
   color: var(--color-white);
   border-radius: 3px;
   transform: rotate(180deg);

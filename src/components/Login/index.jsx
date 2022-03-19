@@ -1,7 +1,20 @@
 import React, { useState } from "react";
-import { Button, ButtonWrapper, Container, Input, Wrapper } from "./style";
+import {
+  Button,
+  ButtonWrapper,
+  Container,
+  FormWrapper,
+  ImageWrapper,
+  Input,
+  MainContainer,
+  SignIn,
+  Texts,
+  Wrapper,
+} from "./style";
 import "./login.css";
 import { useNavigate } from "react-router-dom";
+
+import Registration from "../Registration";
 
 const { REACT_APP_BASE_URL: url } = process.env;
 // console.log(process.env);
@@ -42,50 +55,61 @@ const Login = () => {
   };
 
   return (
-    <div className="login__page">
-      <div>
-        <img src="" alt="" />
-      </div>
+    // <div >  className="login__page"
+    <div>
+      <MainContainer>
+        <ImageWrapper>
+          <Texts>
+            <h1>My Account</h1>
+            <p>Home / My Account</p>
+          </Texts>
+        </ImageWrapper>
 
-      <Container>
-        <form action="#" className="login__form">
-          <p className="sign__in">Sign in</p>
-          <p></p>
-          <Wrapper className="login__inputs">
-            <Input
-              className="inputs"
-              type="email"
-              name="email"
-              value={state.email}
-              placeholder="Username"
-              required
-              autoComplete="on"
-              onChange={onChange}
-            />
-            <Input
-              type="password"
-              name="password"
-              value={state.password}
-              placeholder="Password"
-              required
-              autoComplete="on"
-              onChange={onChange}
-            />
-          </Wrapper>
-          <div className="remember__me">
-            <label>
-              <input type="checkbox" />
-              <span>Remember me</span>
-            </label>
-            <p>Forgot password?</p>
-          </div>
-          <ButtonWrapper>
-            <Button className="btn" onClick={logIn}>
-              SIGN IN
-            </Button>
-          </ButtonWrapper>
-        </form>
-      </Container>
+        <Container>
+          <FormWrapper>
+            <SignIn>
+              <form action="#" className="login__form">
+                <p className="sign__in">Sign in</p>
+                <p></p>
+                <Wrapper>
+                  <Input
+                    className="inputs"
+                    type="email"
+                    name="email"
+                    value={state.email}
+                    placeholder="Username"
+                    required
+                    autoComplete="on"
+                    onChange={onChange}
+                  />
+                  <Input
+                    type="password"
+                    name="password"
+                    value={state.password}
+                    placeholder="Password"
+                    required
+                    autoComplete="on"
+                    onChange={onChange}
+                  />
+                </Wrapper>
+                <div className="remember__me">
+                  <label>
+                    <input type="checkbox" />
+                    <span>Remember me</span>
+                  </label>
+                  <p>Forgot password?</p>
+                </div>
+                <ButtonWrapper>
+                  <Button className="btn" onClick={logIn}>
+                    SIGN IN
+                  </Button>
+                </ButtonWrapper>
+              </form>
+            </SignIn>
+            <Registration />
+          </FormWrapper>
+        </Container>
+      </MainContainer>
     </div>
   );
 };
