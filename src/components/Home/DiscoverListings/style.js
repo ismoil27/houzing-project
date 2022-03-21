@@ -3,6 +3,7 @@ import styled from "styled-components";
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+  margin-top: 50px;
 `;
 
 Container.TextWrapper = styled.div`
@@ -33,7 +34,7 @@ Container.CardWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 50px 225px;
+  padding: 50px 80px;
 `;
 
 export { Container, Text };
