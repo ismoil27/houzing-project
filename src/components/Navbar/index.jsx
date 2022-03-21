@@ -2,7 +2,7 @@ import React from "react";
 import { navbar } from "../../utilities/navbar";
 import { Container, Wrapper } from "./style";
 
-import { NavLink, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 const Navbar = () => {
   return (

@@ -11,16 +11,16 @@ import {
 } from "../Login/style";
 
 const { REACT_APP_BASE_URL: url } = process.env;
-console.log(process.env);
+// console.log(process.env);
 
 const Registration = () => {
   const [inputValue, setInputValue] = useState({
     firstname: "",
     lastname: "",
     email: "",
-    roleIdSet: "",
+    roleIdSet: [1],
     password: "",
-    rePassword: "",
+    // rePassword: "",
   });
 
   const navigate = useNavigate();
@@ -61,7 +61,7 @@ const Registration = () => {
               className="inputs"
               type="text"
               name="firstname"
-              // value={inputValue?.firstname}
+              value={inputValue?.firstname}
               placeholder="First name"
               required
               onChange={onChange}
@@ -70,7 +70,7 @@ const Registration = () => {
               className="inputs"
               type="text"
               name="lastname"
-              // value={inputValue?.lastname}
+              value={inputValue?.lastname}
               placeholder="Last name"
               required
               onChange={onChange}
@@ -79,24 +79,24 @@ const Registration = () => {
               className="inputs"
               type="email"
               name="email"
-              // value={inputValue.email}
+              value={inputValue?.email}
               placeholder="Email"
               required
               onChange={onChange}
             />
-            <Input
+            {/* <Input
               className="inputs"
               type="text"
               name="roleIdSet"
-              // value={inputValue.userrole}
+              value={inputValue.userrole}
               placeholder="User role"
               required
               onChange={onChange}
-            />
+            /> */}
             <Input
               type="password"
               name="password"
-              // value={inputValue.password}
+              value={inputValue?.password}
               placeholder="Password"
               autoComplete="on"
               required
