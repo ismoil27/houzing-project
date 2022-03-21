@@ -166,6 +166,9 @@ const ArrowIcon = styled(arrow)`
   border-radius: 3px;
   transform: rotate(180deg);
   box-sizing: initial;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
 `;
 
 export {

@@ -13,7 +13,7 @@ import { ReactComponent as Heart } from "../../assets/icons/heart.svg";
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 0px 7px 40px 0;
+  margin: 0px 20px 40px 0;
   width: ${({ width }) => (width ? width : "345px")};
   height: ${({ height }) => (height ? height : "428px")};
   border: 1px solid #e6e9ec;

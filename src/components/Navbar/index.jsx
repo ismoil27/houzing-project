@@ -1,31 +1,36 @@
 import React from "react";
 import { navbar } from "../../utilities/navbar";
-import { Container, Logo, Wrapper } from "./style";
-import logo from "../assets/icons/logo.svg";
+import { Container, Wrapper } from "./style";
+
 import { NavLink, Outlet } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <>
-      <Container className="navbar">
-        <Logo src={logo} alt="" />
+      <Container>
+        <Container.LogoWrap>
+          <Container.NavLink to="/">
+            <Container.Logo /> <span> Houzing </span>
+          </Container.NavLink>
+        </Container.LogoWrap>
         <Wrapper>
-          {navbar.map((parent) => {
-            return (
-              <NavLink
-                style={({ isActive }) => {
-                  return {
-                    color: isActive ? "#0061DF" : "#fff",
-                  };
-                }}
-                to={parent.path}
+          {navbar.map((parent) => (
+            <Wrapper.Lists key={parent?.id}>
+              <Container.NavLink
+                // style={({ isActive }) => {
+                //   console.log(isActive);
+                //   return {
+                //     color: isActive ? "#0061DF" : "#fff",
+                //   };
+                // }}
+                to={parent?.path}
                 key={parent.id}
                 className="navlinks"
               >
                 {parent.title}
-              </NavLink>
-            );
-          })}
+              </Container.NavLink>
+            </Wrapper.Lists>
+          ))}
         </Wrapper>
       </Container>
 

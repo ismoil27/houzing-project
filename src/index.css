@@ -22,7 +22,7 @@ html {
   font-style: normal;
 }
 
-.navlinks {
+/* .navlinks {
   font-family: "Lato", "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 600;
@@ -32,7 +32,7 @@ html {
   text-transform: uppercase;
   margin: 0 10px;
   text-decoration: none;
-}
+} */
 
 .header {
   background: linear-gradient(

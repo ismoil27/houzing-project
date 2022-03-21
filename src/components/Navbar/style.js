@@ -1,26 +1,78 @@
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
+import { ReactComponent as Logo } from "../assets/icons/logoonly.svg";
+
+import background from "../assets/images/landing.jpg";
+
 const Container = styled.div`
-  background-color: red;
   display: flex;
-  color: red;
-  height: 80px;
-  align-items: center;
-  margin: 0 20px;
   justify-content: space-between;
-  /* position: sticky; */
-  /* top: 0; */
+  align-items: center;
+  padding: 22px 5px 0 225px;
+  background-color: #7a8691;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(${background});
+  background-repeat: no-repeat;
+  background-size: cover;
 `;
 
-const Logo = styled.img`
-  cursor: pointer;
+Container.NavLink = styled(NavLink)`
+  display: flex;
+  align-items: center;
+  color: var(--color-white);
+  text-decoration: none;
+
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin: 0 10px;
   :hover {
-    color: #0061df;
+    color: var(--color-blue);
+  }
+`;
+
+Container.Logo = styled(Logo)`
+  width: 40px;
+  height: 48px;
+  path {
+    fill: #fff;
+  }
+`;
+
+Container.LogoWrap = styled.div`
+  display: flex;
+  align-items: center;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 32px;
+  color: #fff;
+  span {
+    margin-left: 13px;
+    :hover {
+      color: var(--color-blue);
+    }
   }
 `;
 
 const Wrapper = styled.div`
   display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+`;
+Wrapper.Lists = styled.div`
+  display: flex;
+  align-items: center;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #fff;
+  /* padding-right: 40px; */
 `;
 
-export { Container, Logo, Wrapper };
+export { Container, Wrapper };
