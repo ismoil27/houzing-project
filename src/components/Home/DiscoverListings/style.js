@@ -4,6 +4,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 50px;
+  margin-bottom: 50px;
 `;
 
 Container.TextWrapper = styled.div`
@@ -34,7 +35,23 @@ Container.CardWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 50px 80px;
+  padding: 50px 80px 0 80px;
+`;
+
+Container.Buttons = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+Container.Circle = styled.div`
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: ${({ background }) =>
+    background ? background : "var(--color-blue)"};
+  margin-right: 10px;
+  border: ${({ border }) => border && "1px solid #0061DF"};
 `;
 
 export { Container, Text };

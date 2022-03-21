@@ -17,6 +17,14 @@ const DiscoverListings = () => {
         <GenericCard />
         <GenericCard />
       </Container.CardWrapper>
+
+      <Container.Buttons>
+        <Container.Circle />
+        <Container.Circle background="none" border />
+        <Container.Circle />
+        <Container.Circle />
+        <Container.Circle />
+      </Container.Buttons>
     </Container>
   );
 };
