@@ -17,7 +17,6 @@ import { useNavigate } from "react-router-dom";
 import Registration from "../Registration";
 
 const { REACT_APP_BASE_URL: url } = process.env;
-// console.log(process.env);
 
 const Login = () => {
   const [state, setState] = useState({
@@ -25,7 +24,6 @@ const Login = () => {
     password: "",
   });
 
-  // https://houzing-app.herokuapp.com/api/public/auth/login
   const navigate = useNavigate();
 
   const logIn = () => {
