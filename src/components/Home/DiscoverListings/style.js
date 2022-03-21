@@ -29,6 +29,11 @@ Text.Small = styled.div`
   color: #696969;
 `;
 
-Container.CardWrapper = styled.div``;
+Container.CardWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 225px;
+`;
 
 export { Container, Text };

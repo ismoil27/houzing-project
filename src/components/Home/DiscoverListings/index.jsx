@@ -1,4 +1,5 @@
 import React from "react";
+import GenericCard from "../../Generic/Card";
 import { Container, Text } from "./style";
 
 const DiscoverListings = () => {
@@ -10,6 +11,12 @@ const DiscoverListings = () => {
           Lorem ipsum dolor sit amet, consectetur adipisicing elit
         </Text.Small>
       </Container.TextWrapper>
+      <Container.CardWrapper>
+        <GenericCard />
+        <GenericCard />
+        <GenericCard />
+        <GenericCard />
+      </Container.CardWrapper>
     </Container>
   );
 };
