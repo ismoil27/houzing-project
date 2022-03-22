@@ -1,4 +1,5 @@
 import React from "react";
+import ChooseCard from "./ChooseCard";
 import DiscoverListings from "./DiscoverListings";
 import Hero from "./Hero";
 
@@ -9,6 +10,7 @@ const Home = () => {
     <div>
       <Hero />
       <DiscoverListings />
+      <ChooseCard />
     </div>
   );
 };

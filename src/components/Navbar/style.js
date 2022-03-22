@@ -22,7 +22,6 @@ Container.NavLink = styled(NavLink)`
   align-items: center;
   color: var(--color-white);
   text-decoration: none;
-
   font-style: normal;
   font-weight: 600;
   line-height: 20px;

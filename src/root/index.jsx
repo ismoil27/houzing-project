@@ -9,7 +9,6 @@ const Root = () => {
   return (
     <div>
       <Navbar />
-
       <Routes>
         {navbar.map((value) => {
           return (
