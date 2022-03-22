@@ -9,7 +9,7 @@ const Navbar = () => {
     <>
       <Container>
         <Container.LogoWrap>
-          <Container.NavLink to="/">
+          <Container.NavLink to="/home">
             <Container.Logo /> <span> Houzing </span>
           </Container.NavLink>
         </Container.LogoWrap>
