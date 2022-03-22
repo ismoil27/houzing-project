@@ -69,7 +69,7 @@ export const navbar = [
   },
   {
     id: 9,
-    title: "",
+    title: "Login",
     path: "/login",
     element: <Login />,
     child: [],
