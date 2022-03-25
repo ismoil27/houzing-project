@@ -17,7 +17,6 @@ export const GenericCard = (value) => {
         <Wrapper.DetailsTop>
           <Wrapper.Title>{value?.name || "No Title"}</Wrapper.Title>
           <Wrapper.Address>{value?.address || "No Address"}</Wrapper.Address>
-
           <Wrapper.Features>
             <Wrapper.Items>
               <Wrapper.Bed />
