@@ -10,7 +10,7 @@ import { ReactComponent as logout } from "../components/assets/icons/logout.svg"
 
 import Generic from "../components/Generic";
 import DashboardComponent from "../components/Sell/Dashboard";
-import Favorite from "../components/Sell/Dashboard/Favorite";
+import Favorites from "../components/Sell/Dashboard/Favorites";
 import InBoxing from "../components/Sell/Dashboard/InBoxing";
 import NewProperty from "../components/Sell/Dashboard/NewProperty";
 import MyProperties from "../components/Sell/Dashboard/MyProperties";
@@ -56,10 +56,10 @@ export const Dashboard = [
   {
     id: 5,
     title: "Favorites",
-    pathname: "/sell/dashboard",
-    Component: DashboardComponent,
+    pathname: "/favorites",
+    Component: Favorites,
     child: [],
-    Icon: dashboard,
+    Icon: heart,
     role: ["admin"],
   },
   {
