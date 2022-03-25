@@ -28,6 +28,11 @@ const ChooseCard = () => {
               <Circle>
                 <Smile />
               </Circle>
+              <Text.Card>Trusted By Thousands</Text.Card>
+              <Text.Cardsmall>
+                With over 1 million+ homes for sale available on the website,
+                Trulia can match you with a house you will want to call home.
+              </Text.Cardsmall>
             </Wrap>
           </Card>
           <Card>
@@ -35,6 +40,11 @@ const ChooseCard = () => {
               <Circle>
                 <Property />
               </Circle>
+              <Text.Card>Wide Renge Of Properties</Text.Card>
+              <Text.Cardsmall>
+                With over 1 million+ homes for sale available on the website,
+                Trulia can match you with a house you will want to call home.
+              </Text.Cardsmall>
             </Wrap>
           </Card>
           <Card>
@@ -42,6 +52,12 @@ const ChooseCard = () => {
               <Circle>
                 <Calculator />
               </Circle>
+
+              <Text.Card>Financing Made Easy</Text.Card>
+              <Text.Cardsmall>
+                With over 1 million+ homes for sale available on the website,
+                Trulia can match you with a house you will want to call home.
+              </Text.Cardsmall>
             </Wrap>
           </Card>
           <Card>
@@ -49,8 +65,11 @@ const ChooseCard = () => {
               <Circle>
                 <Map />
               </Circle>
-              <p>Hello</p>
-              <p>Hello</p>
+              <Text.Card>See Neighborhoods</Text.Card>
+              <Text.Cardsmall>
+                With over 1 million+ homes for sale available on the website,
+                Trulia can match you with a house you will want to call home.
+              </Text.Cardsmall>
             </Wrap>
           </Card>
         </CardsWrapper>

@@ -43,6 +43,7 @@ const CardsWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
+  margin-bottom: 100px;
   /* padding: 100px 225px; */
 `;
 
@@ -58,7 +59,6 @@ const Circle = styled.div`
 const Card = styled.div`
   width: 300px;
   height: 336px;
-
   margin: 10px 30px 10px 0;
   background-color: var(--color-white);
   border-radius: 3px;
@@ -108,6 +108,28 @@ const Wrap = styled.div`
   flex-direction: column;
   align-items: center;
   margin: 40px auto;
+`;
+
+Text.Card = styled.div`
+  color: var(--color-bg);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 23px;
+  margin-top: 26px;
+`;
+Text.Cardsmall = styled.div`
+  font-style: normal;
+  text-align: center;
+
+  width: 90%;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #696969;
+  margin-top: 17px;
+  margin-bottom: 45px;
+  /* padding: 0 20px 10px 20px; */
 `;
 
 export {
