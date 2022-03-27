@@ -9,46 +9,48 @@ import { ReactComponent as msg } from "../components/assets/icons/msg.svg";
 import { ReactComponent as logout } from "../components/assets/icons/logout.svg";
 
 import Generic from "../components/Generic";
-import DashboardComponent from "../components/Sell/Dashboard";
-import Favorites from "../components/Sell/Dashboard/Favorites";
-import InBoxing from "../components/Sell/Dashboard/InBoxing";
-import NewProperty from "../components/Sell/Dashboard/NewProperty";
-import MyProperties from "../components/Sell/Dashboard/MyProperties";
-import Edit from "../components/Sell/Dashboard/MyProperties/Edit";
+import DashboardComponent from "../components/Sell/Dashboarddd";
 
-export const Dashboard = [
+import Favorites from "../components/Sell/Dashboarddd/Favorites";
+import InBoxing from "../components/Sell/Dashboarddd/InBoxing";
+import NewProperty from "../components/Sell/Dashboarddd/NewProperty";
+import MyProperties from "../components/Sell/Dashboarddd/MyProperties";
+import Edit from "../components/Sell/Dashboarddd/MyProperties/Edit";
+
+export const Dashboarddata = [
   {
     id: 1,
     title: "Dashboard",
-    pathname: "/sell/dashboard",
-    Component: DashboardComponent,
+    path: "/sell/dashboard",
+    element: <DashboardComponent />,
     child: [],
     Icon: dashboard,
-    role: ["admin"],
+    // role: ["admin"],
   },
   {
     id: 2,
     title: "My Profile",
-    pathname: "/my-profile",
-    Component: Generic,
+    path: "/my-profile",
+    // element: <Generic />,
+    element: <Favorites />,
     child: [],
     Icon: user,
-    role: ["admin"],
+    // role: ["admin"],
   },
   {
     id: 3,
     title: "My Properties List",
-    pathname: "/my-properties-list",
-    Component: MyProperties,
+    path: "/my-properties-list",
+    element: <MyProperties />,
     child: [],
     Icon: home,
-    role: ["admin"],
+    // role: ["admin"],
   },
   {
     id: 4,
     title: "Add New Property",
-    pathname: "/add-new-property",
-    Component: NewProperty,
+    path: "/add-new-property",
+    element: <NewProperty />,
     child: [],
     Icon: plusDashed,
     role: ["admin"],
@@ -56,44 +58,45 @@ export const Dashboard = [
   {
     id: 5,
     title: "Favorites",
-    pathname: "/favorites",
-    Component: Favorites,
+    path: "/favorites",
+    element: <Favorites />,
     child: [],
     Icon: heart,
-    role: ["admin"],
+    // role: ["admin"],
   },
   {
     id: 6,
     title: "Saved Searches",
-    pathname: "/saved-searches",
-    Component: Edit,
+    path: "/saved-searches",
+    element: <Edit />,
     child: [],
     Icon: search,
-    role: ["admin"],
+    // role: ["admin"],
   },
   {
     id: 7,
     title: "My Invoices",
-    pathname: "/my-invoices",
-    Component: Generic,
+    path: "/my-invoices",
+    // element: <Generic />,
+    element: <InBoxing />,
     child: [],
     Icon: invoice,
-    role: ["admin"],
+    // role: ["admin"],
   },
   {
     id: 8,
     title: "Inbox",
-    pathname: "/inbox",
-    Component: InBoxing,
+    path: "/inbox",
+    element: <InBoxing />,
     child: [],
     Icon: msg,
-    role: ["admin"],
+    // role: ["admin"],
   },
   {
     id: 9,
     title: "Logout",
-    pathname: "/logout",
-    Component: DashboardComponent,
+    path: "/logout",
+    element: <DashboardComponent />,
     child: [],
     Icon: logout,
   },

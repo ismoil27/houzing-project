@@ -1,8 +1,8 @@
 import React from "react";
-import { NavLink, Outlet, useLocation } from "react-router-dom";
+import { NavLink, Outlet, Routes, useLocation } from "react-router-dom";
 
-import { Dashboard as data } from "../../../utilities/dashboard";
-import DashboardComponent from "../Dashboard";
+import { Dashboarddata as data } from "../../../utilities/dashboard";
+import DashboardComponent from "../Dashboarddd";
 import {
   Box,
   Container,
@@ -17,23 +17,34 @@ export const Sidebar = () => {
   return (
     <Wrapper>
       <Container>
-        {data.map(({ title, Icon, id, pathname }) => (
+        {data.map(({ title, Icon, id, path }) => (
           <NavLink
             key={id}
-            to={pathname}
+            to={path}
             style={({ isActive }) => (isActive ? activeStyle : notActive)}
           >
-            <Box active={location.pathname === pathname}>
-              <Icons active={location.pathname === pathname}>
+            <Box active={location?.path === path}>
+              <Icons active={location?.path === path}>
                 <Icon className="hoverable" />
               </Icons>
               {title}
             </Box>
           </NavLink>
         ))}
-      </Container>
+      </Container>{" "}
+      {location?.pathname === "/sell/dashboard" ? (
+        <DashboardComponent />
+      ) : (
+        <Outlet />
+      )}
     </Wrapper>
   );
 };
 
 export default Sidebar;
+
+// {location?.pathname === "/sell/dashboard" ? (
+//   <DashboardComponent />
+// ) : (
+//   <Outlet />
+// )}
