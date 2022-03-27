@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+import { ReactComponent as property } from "../../assets/icons/prty.svg";
+import { ReactComponent as view } from "../../assets/icons/view.svg";
+import { ReactComponent as message } from "../../assets/icons/message.svg";
+import { ReactComponent as heart } from "../../assets/icons/hrt.svg";
+
 const Container = styled.div`
   width: 100%;
   display: flex;
@@ -42,6 +47,47 @@ Wrapper.Cards = styled.div`
   background-color: var(--color-white);
   display: flex;
   margin: 0 5px;
+  align-items: center;
 `;
 
-export { Container, Wrapper, Title };
+Wrapper.Circle = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: rgb(238, 244, 252);
+  margin-left: 30px;
+`;
+
+const CardTexts = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 10px;
+`;
+
+CardTexts.Number = styled.div`
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 38px;
+  text-align: center;
+  color: #0061df;
+`;
+
+CardTexts.Des = styled.div`
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 23px;
+  color: var(--color-bg);
+`;
+
+const Property = styled(property)``;
+const View = styled(view)``;
+const Message = styled(message)``;
+const Heart = styled(heart)``;
+
+export { Container, Wrapper, Title, Property, CardTexts, View, Message, Heart };
