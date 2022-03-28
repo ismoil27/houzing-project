@@ -16,6 +16,7 @@ import InBoxing from "../components/Sell/Dashboarddd/InBoxing";
 import NewProperty from "../components/Sell/Dashboarddd/NewProperty";
 import MyProperties from "../components/Sell/Dashboarddd/MyProperties";
 import Edit from "../components/Sell/Dashboarddd/MyProperties/Edit";
+import MyProfile from "../components/Sell/Dashboarddd/MyProfile";
 
 export const Dashboarddata = [
   {
@@ -30,9 +31,8 @@ export const Dashboarddata = [
   {
     id: 2,
     title: "My Profile",
-    path: "/my-profile",
-    // element: <Generic />,
-    element: <Favorites />,
+    path: "/sell/my-profile",
+    element: <MyProfile />,
     child: [],
     Icon: user,
     // role: ["admin"],

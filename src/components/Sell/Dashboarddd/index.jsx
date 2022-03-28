@@ -33,8 +33,8 @@ const Dashboarddd = () => {
             <View />
           </Wrapper.Circle>
           <CardTexts>
-            <CardTexts.Number>15</CardTexts.Number>
-            <CardTexts.Des>My Properties</CardTexts.Des>
+            <CardTexts.Number>22</CardTexts.Number>
+            <CardTexts.Des>Total Views</CardTexts.Des>
           </CardTexts>
         </Wrapper.Cards>
 
@@ -43,8 +43,8 @@ const Dashboarddd = () => {
             <Message />
           </Wrapper.Circle>
           <CardTexts>
-            <CardTexts.Number>15</CardTexts.Number>
-            <CardTexts.Des>My Properties</CardTexts.Des>
+            <CardTexts.Number>921</CardTexts.Number>
+            <CardTexts.Des>Inbox</CardTexts.Des>
           </CardTexts>
         </Wrapper.Cards>
 
@@ -53,8 +53,8 @@ const Dashboarddd = () => {
             <Heart />
           </Wrapper.Circle>
           <CardTexts>
-            <CardTexts.Number>15</CardTexts.Number>
-            <CardTexts.Des>My Properties</CardTexts.Des>
+            <CardTexts.Number>148</CardTexts.Number>
+            <CardTexts.Des>Total Favorites</CardTexts.Des>
           </CardTexts>
         </Wrapper.Cards>
       </Wrapper.Boxes>

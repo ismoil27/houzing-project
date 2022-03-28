@@ -9,7 +9,8 @@ const Container = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  background-color: rgb(246, 248, 249);
+  /* background-color: rgb(246, 248, 249); */
+  background: #e5e5e5;
   padding: 60px 0px 50px 40px;
 `;
 
@@ -48,6 +49,10 @@ Wrapper.Cards = styled.div`
   display: flex;
   margin: 0 5px;
   align-items: center;
+  cursor: pointer;
+  :hover {
+    box-shadow: 0px 10px 50px rgba(13, 38, 59, 0.1);
+  }
 `;
 
 Wrapper.Circle = styled.div`
