@@ -1,7 +1,38 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Container, Label, Body, Wrap, Search } from "./style";
 
+const { REACT_APP_BASE_URL: url } = process.env;
+
 const MyProperties = () => {
+  const [houses, setHouses] = useState([]);
+
+  useEffect(() => {
+    fetch(`${url}/v1/houses`, {
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
+      },
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        setHouses(res?.dataList[0]);
+      });
+  }, []);
+
+  // const house = () => {
+  //   fetch(`${url}/v1/house_details`, {
+  //     method: "GET",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify(),
+  //   })
+  //     .then((res) => res.json())
+  //     .then((res) => {
+  //       console.log(res);
+  //       localStorage.setItem("token", res?.data);
+  //     });
+  // };
+
   return (
     <Container>
       <Container.Title>
@@ -46,6 +77,18 @@ const MyProperties = () => {
             </Container.Tr>
           </Container.Thead>
         </Container.Table>
+        <div>
+          {houses.map((value) => {
+            return (
+              <div key={value.id}>
+                <h1>
+                  {value?.city} - {value?.country}
+                </h1>
+                <h3>{value?.desccription}</h3>
+              </div>
+            );
+          })}
+        </div>
       </Body>
     </Container>
   );
