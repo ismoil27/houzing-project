@@ -1,5 +1,8 @@
 import styled from "styled-components";
 
+import { ReactComponent as trash } from "../../../assets/icons/trash.svg";
+import { ReactComponent as pen } from "../../../assets/icons/pen.svg";
+
 const Container = styled.div`
   width: 100%;
   display: flex;
@@ -98,6 +101,128 @@ Container.Td = styled.td`
   line-height: 20px;
   color: var(--color-bg);
   padding-left: ${({ padding }) => padding && "20px"};
+`;
+
+Container.Tr = styled.tr`
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 1fr 0.5fr;
+  align-items: center;
+  padding: 20px 0;
+`;
+
+Container.Td = styled.td`
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #0d263b;
+
+  .date {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #696969;
+  }
+  .pending {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #cc5040;
+  }
+  .view {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #696969;
+  }
+`;
+
+Container.BtnImg = styled.div`
+  position: absolute;
+  top: 12px;
+  left: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 73px;
+  height: 23px;
+  background: #0061df;
+  border-radius: 3px;
+  margin: 0px 10px;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 13px;
+  color: #ffffff;
+  transform: uppercase;
+`;
+
+Container.Image = styled.img`
+  width: 160px;
+  height: 140px;
+  border: 1px solid red;
+`;
+
+Container.Details = styled.div`
+  margin: 20px;
+  .fsale {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    text-decoration-line: line-through;
+    color: #696969;
+  }
+  .sale {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #0d263b;
+  }
+`;
+
+Container.DetailsTitle = styled.div`
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #0d263b;
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 71px;
+    height: 23px;
+    background: #0d263b;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 13px;
+    color: #ffffff;
+    border-radius: 3px;
+    margin: 0px 10px;
+  }
+`;
+
+Container.TBody = styled.tbody`
+  display: flex;
+  flex-direction: column;
+`;
+
+Container.Desc = styled.div`
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #696969;
+  span {
+    margin-left: 4px;
+  }
+`;
+
+Container.Pen = styled(pen)`
+  width: 16px;
+  cursor: pointer;
+  height: 16px;
 `;
 
 export { Container, Body, Label, Wrap, Search };

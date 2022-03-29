@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Container, Label, Body, Wrap, Search } from "./style";
+import img from "../../../assets/images/img.png";
 
 const { REACT_APP_BASE_URL: url } = process.env;
 
@@ -77,18 +78,43 @@ const MyProperties = () => {
             </Container.Tr>
           </Container.Thead>
         </Container.Table>
-        <div>
-          {houses.map((value) => {
-            return (
-              <div key={value.id}>
-                <h1>
-                  {value?.city} - {value?.country}
-                </h1>
-                <h3>{value?.desccription}</h3>
-              </div>
-            );
-          })}
-        </div>
+        <Container.TBody>
+          {houses.map((value) => (
+            <Container.Tr key={value.id}>
+              <Container.Td>
+                <Container.BtnImg>Featured</Container.BtnImg>
+                <Container.Image src={img} />
+                <Container.Details>
+                  <Container.DetailsTitle>
+                    {value.title || "not given"}
+                    <span> FOR SALE </span>
+                  </Container.DetailsTitle>
+                  <Container.Desc>
+                    {value?.address || " address "} , {value?.city || " city "}
+                    {value?.country || " country "}
+                  </Container.Desc>
+                  <div className="fsale">
+                    $ {value?.price || "not given"}/mo
+                  </div>
+                  <div className="sale">
+                    $ {value?.SalePrice || "not given"}/mo
+                  </div>
+                </Container.Details>
+              </Container.Td>
+              <Container.Td>
+                <div className="date">{value?.published || "not given"}</div>
+              </Container.Td>
+
+              <Container.Td>
+                <div className="pending">Pending</div>
+              </Container.Td>
+
+              <Container.Td>
+                <div className="view">5.933</div>
+              </Container.Td>
+            </Container.Tr>
+          ))}
+        </Container.TBody>
       </Body>
     </Container>
   );
