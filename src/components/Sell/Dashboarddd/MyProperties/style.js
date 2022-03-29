@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 import { ReactComponent as trash } from "../../../assets/icons/trash.svg";
 import { ReactComponent as pen } from "../../../assets/icons/pen.svg";
+// import { Drawer } from "antd";
 
 const Container = styled.div`
   width: 100%;
@@ -219,10 +220,47 @@ Container.Desc = styled.div`
   }
 `;
 
+// Container.Drawer = styled(Drawer)``;
+
 Container.Pen = styled(pen)`
   width: 16px;
   cursor: pointer;
   height: 16px;
+`;
+Container.Trash = styled(trash)`
+  width: 35px;
+  height: 35px;
+  background: #f6f8f9;
+  border-radius: 50%;
+  padding: 9px;
+  margin-left: 20px;
+  cursor: pointer;
+`;
+
+Container.Pagination = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .ant-pagination-item-link {
+    border: none;
+  }
+  .ant-pagination li {
+    border: none !important;
+  }
+  .ant-pagination li:hover:not(.ant-pagination-item-active) {
+    border-radius: 50%;
+    background-color: #f6f8f9;
+    a {
+      color: rgba(0, 0, 0, 0.85);
+    }
+  }
+  .ant-pagination-item-active {
+    background: #0061df;
+    border-radius: 50%;
+    a {
+      color: #fff !important;
+    }
+  }
 `;
 
 export { Container, Body, Label, Wrap, Search };

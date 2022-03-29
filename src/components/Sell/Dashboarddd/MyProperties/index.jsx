@@ -2,10 +2,15 @@ import React, { useEffect, useState } from "react";
 import { Container, Label, Body, Wrap, Search } from "./style";
 import img from "../../../assets/images/img.png";
 
+import "antd/dist/antd.css";
+
+import { Drawer, Pagination, Popconfirm } from "antd";
+
 const { REACT_APP_BASE_URL: url } = process.env;
 
 const MyProperties = () => {
   const [houses, setHouses] = useState([]);
+  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     fetch(`${url}/v1/houses`, {
@@ -19,20 +24,13 @@ const MyProperties = () => {
       });
   }, []);
 
-  // const house = () => {
-  //   fetch(`${url}/v1/house_details`, {
-  //     method: "GET",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //     body: JSON.stringify(),
-  //   })
-  //     .then((res) => res.json())
-  //     .then((res) => {
-  //       console.log(res);
-  //       localStorage.setItem("token", res?.data);
-  //     });
-  // };
+  const showDrawer = () => {
+    setVisible(true);
+  };
+
+  const onClose = () => {
+    setVisible(false);
+  };
 
   return (
     <Container>
@@ -77,44 +75,80 @@ const MyProperties = () => {
               <Container.Td>Action</Container.Td>
             </Container.Tr>
           </Container.Thead>
+
+          <Container.TBody>
+            {houses.map((value) => (
+              <Container.Tr key={value.id}>
+                <Container.Td>
+                  <Container.BtnImg>Featured</Container.BtnImg>
+                  <Container.Image src={img} />
+                  <Container.Details>
+                    <Container.DetailsTitle>
+                      {value.title || "not given"}
+                      <span> FOR SALE </span>
+                    </Container.DetailsTitle>
+                    <Container.Desc>
+                      {value?.address || " address "} ,{" "}
+                      {value?.city || " city "}
+                      {value?.country || " country "}
+                    </Container.Desc>
+                    <div className="fsale">
+                      $ {value?.price || "not given"}/mo
+                    </div>
+                    <div className="sale">
+                      $ {value?.SalePrice || "not given"}/mo
+                    </div>
+                  </Container.Details>
+                </Container.Td>
+                <Container.Td>
+                  <div className="date">{value?.published || "not given"}</div>
+                </Container.Td>
+
+                <Container.Td>
+                  <div className="pending">Pending</div>
+                </Container.Td>
+
+                <Container.Td>
+                  <div className="view">5.933</div>
+                </Container.Td>
+
+                <Container.Td>
+                  <Drawer
+                    title="Basic Drawer"
+                    placement="right"
+                    onClose={onClose}
+                    visible={visible}
+                    width={"50%"}
+                  >
+                    <p>Some contents...</p>
+                    <p>Some contents...</p>
+                    <p>Some contents...</p>
+                  </Drawer>
+                  <Container.Pen type="primary" onClick={showDrawer} />
+
+                  <Popconfirm
+                    title="Are you sure to delete this house?"
+                    okText="Yes"
+                    cancelText="No"
+                  >
+                    <Container.Trash />
+                  </Popconfirm>
+                </Container.Td>
+              </Container.Tr>
+            ))}
+          </Container.TBody>
         </Container.Table>
-        <Container.TBody>
-          {houses.map((value) => (
-            <Container.Tr key={value.id}>
-              <Container.Td>
-                <Container.BtnImg>Featured</Container.BtnImg>
-                <Container.Image src={img} />
-                <Container.Details>
-                  <Container.DetailsTitle>
-                    {value.title || "not given"}
-                    <span> FOR SALE </span>
-                  </Container.DetailsTitle>
-                  <Container.Desc>
-                    {value?.address || " address "} , {value?.city || " city "}
-                    {value?.country || " country "}
-                  </Container.Desc>
-                  <div className="fsale">
-                    $ {value?.price || "not given"}/mo
-                  </div>
-                  <div className="sale">
-                    $ {value?.SalePrice || "not given"}/mo
-                  </div>
-                </Container.Details>
-              </Container.Td>
-              <Container.Td>
-                <div className="date">{value?.published || "not given"}</div>
-              </Container.Td>
-
-              <Container.Td>
-                <div className="pending">Pending</div>
-              </Container.Td>
-
-              <Container.Td>
-                <div className="view">5.933</div>
-              </Container.Td>
-            </Container.Tr>
-          ))}
-        </Container.TBody>
+        <Container.Pagination>
+          <Pagination
+            // current={page}
+            // total={meTotal}
+            // showSizeChanger={false}
+            // pageSize={size}
+            // onChange={handlePaginationChange}
+            defaultCurrent={1}
+            total={50}
+          />
+        </Container.Pagination>
       </Body>
     </Container>
   );
