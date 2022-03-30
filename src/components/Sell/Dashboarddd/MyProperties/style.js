@@ -101,7 +101,6 @@ Container.Td = styled.td`
   font-size: 16px;
   line-height: 20px;
   color: var(--color-bg);
-  padding-left: ${({ padding }) => padding && "20px"};
 `;
 
 Container.Tr = styled.tr`
@@ -208,6 +207,10 @@ Container.DetailsTitle = styled.div`
 Container.TBody = styled.tbody`
   display: flex;
   flex-direction: column;
+  .hello {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 Container.Desc = styled.div`

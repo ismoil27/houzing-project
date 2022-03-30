@@ -5,6 +5,12 @@ const Container = styled.div`
   flex-direction: column;
   margin-top: 50px;
   margin-bottom: 50px;
+  /* .cardwrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 80px 0 80px;
+  } */
 `;
 
 Container.TextWrapper = styled.div`
@@ -34,6 +40,7 @@ Text.Small = styled.div`
 Container.CardWrapper = styled.div`
   display: flex;
   align-items: center;
+
   justify-content: space-between;
   padding: 50px 80px 0 80px;
 `;

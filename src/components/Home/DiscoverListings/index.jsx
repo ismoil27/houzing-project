@@ -11,6 +11,7 @@ const DiscoverListings = () => {
           Lorem ipsum dolor sit amet, consectetur adipisicing elit
         </Text.Small>
       </Container.TextWrapper>
+
       <Container.CardWrapper>
         <GenericCard />
         <GenericCard />

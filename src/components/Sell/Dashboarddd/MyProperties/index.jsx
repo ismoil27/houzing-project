@@ -2,15 +2,14 @@ import React, { useEffect, useState } from "react";
 import { Container, Label, Body, Wrap, Search } from "./style";
 import img from "../../../assets/images/img.png";
 
-import "antd/dist/antd.css";
+// import "antd/dist/antd.css";
 
-import { Drawer, Pagination, Popconfirm } from "antd";
+import { Popconfirm } from "antd";
 
 const { REACT_APP_BASE_URL: url } = process.env;
 
 const MyProperties = () => {
   const [houses, setHouses] = useState([]);
-  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     fetch(`${url}/v1/houses`, {
@@ -23,14 +22,6 @@ const MyProperties = () => {
         setHouses(res?.dataList[0]);
       });
   }, []);
-
-  const showDrawer = () => {
-    setVisible(true);
-  };
-
-  const onClose = () => {
-    setVisible(false);
-  };
 
   return (
     <Container>
@@ -68,7 +59,7 @@ const MyProperties = () => {
         <Container.Table>
           <Container.Thead>
             <Container.Tr>
-              <Container.Td padding>Listing Title</Container.Td>
+              <Container.Td margin>Listing Title</Container.Td>
               <Container.Td>Date Published</Container.Td>
               <Container.Td>Status</Container.Td>
               <Container.Td>View</Container.Td>
@@ -113,42 +104,22 @@ const MyProperties = () => {
                 </Container.Td>
 
                 <Container.Td>
-                  <Drawer
-                    title="Basic Drawer"
-                    placement="right"
-                    onClose={onClose}
-                    visible={visible}
-                    width={"50%"}
-                  >
-                    <p>Some contents...</p>
-                    <p>Some contents...</p>
-                    <p>Some contents...</p>
-                  </Drawer>
-                  <Container.Pen type="primary" onClick={showDrawer} />
+                  <Container.Pen type="primary" />
 
-                  <Popconfirm
+                  {/* <Popconfirm
                     title="Are you sure to delete this house?"
                     okText="Yes"
                     cancelText="No"
-                  >
-                    <Container.Trash />
-                  </Popconfirm>
+                  ></Popconfirm> */}
+                  <Container.Trash />
                 </Container.Td>
               </Container.Tr>
             ))}
           </Container.TBody>
         </Container.Table>
-        <Container.Pagination>
-          <Pagination
-            // current={page}
-            // total={meTotal}
-            // showSizeChanger={false}
-            // pageSize={size}
-            // onChange={handlePaginationChange}
-            defaultCurrent={1}
-            total={50}
-          />
-        </Container.Pagination>
+        {/* <Container.Pagination>
+          <Pagination defaultCurrent={1} total={50} />
+        </Container.Pagination> */}
       </Body>
     </Container>
   );
